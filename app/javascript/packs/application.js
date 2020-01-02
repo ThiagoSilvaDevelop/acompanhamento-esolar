@@ -19,3 +19,6 @@ require("channels")
 //= require bootstrap.bundle.min.js
 //= require jquery.easing.min.js
 //= require new-age.min.js
+
+import 'bootstrap'
+import './src/application.scss'
