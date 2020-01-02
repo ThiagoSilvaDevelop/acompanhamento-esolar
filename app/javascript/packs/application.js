@@ -21,4 +21,5 @@ require("channels")
 //= require new-age.min.js
 
 import 'bootstrap'
-import './src/application.scss'
+
+// import './src/application.scss'
