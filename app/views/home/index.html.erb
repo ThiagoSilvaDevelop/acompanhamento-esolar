@@ -1,0 +1,99 @@
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a style="color: #fff;" href="#page-top">
+        <b><i class="fa fa-edit"></i> EDUCARE</b>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#who_we_are">Quem Somos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Entre em Conato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <article class="page-top" id="page-top">
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">
+              <%= t('texts.apresentations') %></h1>
+              <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger"> <%= t('texts.contact_for_me') %> </a>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <%= image_tag("exemplo1") %>
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </article>
+
+  <section class="download bg-primary text-center" id="who_we_are">
+    <%= render 'apresentation' %>
+  </section>
+
+
+
+  <section class="cta">
+    <div class="cta-content">
+      <div class="container">
+        <div class="container">
+          <h3>Estamos aqui para Ensinar, aqui está dois comentários dos pais que tivemos o prazer de trabalhar.</h3>
+        </div><br><br>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <%= image_tag('testefacebook', style: 'width: 100px;') %>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <%= image_tag('testefacebook', style: 'width: 100px;') %>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section class="contact bg-primary" id="contact">
+    <%= render 'contact' %>
+  </section>
+
+  <footer>
+    <%= render 'footer' %>
+  </footer>

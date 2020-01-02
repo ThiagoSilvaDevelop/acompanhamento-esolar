@@ -1,0 +1,33 @@
+<%= form_with(model: Contact.new, local: true) do |form| %>
+  <% if Contact.new.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :name, class: "form-control", style: 'width: 500px;', placeholder: 'Nome Completo' %>
+  </div><br>
+
+  <div class="field">
+    <%= form.text_field :phone, class: "form-control", style: 'width: 460px;', placeholder: 'Whatsapp/Contato: (91) 90000-0000' %>
+  </div><br>
+
+  <div class="field">
+    <%= form.text_field :email, class: "form-control", style: 'width: 430px;', placeholder: 'E-Mail: Exemplo@exemplo.com.br' %>
+  </div><br>
+
+  <div class="field">
+    <%= form.text_area :description, class: "form-control", style: 'width: 400px;', placeholder: 'Descrição' %>
+  </div><br>
+
+  <div>
+    <%= form.submit 'Enviar', class:"actions btn btn-primary"%>
+  </div><br>
+<% end %>
